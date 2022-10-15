@@ -2,7 +2,7 @@ import pickle
 import streamlit as slt
 #PAGE_CONFIG = {"page_title":"StColab.io","page_icon":":smiley:","layout":"centered"}
 #slt.beta_set_page_config(**PAGE_CONFIG)
-logistic_regression = pickle.load(open('colab-notebook/Completed_llogistic_regression_model.joblib', 'rb'))
+logistic_regression = pickle.load(open('/app/colab-notebook/Completed_llogistic_regression_model.joblib', 'rb'))
 #tree = pickle.load(open('https://github.com/mudaralkaddar/colab-notebook/Completed_Bayesian_model.joblib', 'rb'))
 #GNB = pickle.load(open('https://github.com/mudaralkaddar/colab-notebook/Completed_tree_model.joblib', 'rb'))
 def main():
