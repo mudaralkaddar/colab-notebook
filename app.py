@@ -8,9 +8,9 @@ def isfloat(x):
     return False
 #PAGE_CONFIG = {"page_title":"StColab.io","page_icon":":smiley:","layout":"centered"}
 #slt.beta_set_page_config(**PAGE_CONFIG)
-logistic_regression = pickle.load(open('/content/drive/MyDrive/Colab Notebooks/Completed_llogistic_regression_model.joblib', 'rb'))
-tree = pickle.load(open('/content/drive/MyDrive/Colab Notebooks/Completed_Bayesian_model.joblib', 'rb'))
-GNB = pickle.load(open('/content/drive/MyDrive/Colab Notebooks/Completed_tree_model.joblib', 'rb'))
+logistic_regression = pickle.load(open('https://github.com/mudaralkaddar/colab-notebook/Completed_llogistic_regression_model.joblib', 'rb'))
+tree = pickle.load(open('https://github.com/mudaralkaddar/colab-notebook/Completed_Bayesian_model.joblib', 'rb'))
+GNB = pickle.load(open('https://github.com/mudaralkaddar/colab-notebook/Completed_tree_model.joblib', 'rb'))
 def main():
   slt.title('compare between three models in case of accept or refuse give a loan')
 
