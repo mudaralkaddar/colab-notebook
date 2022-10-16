@@ -1,4 +1,5 @@
 import streamlit as slt
+import pickle
 def isfloat(x):
   try:
     float(x)
