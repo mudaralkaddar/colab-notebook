@@ -1,4 +1,3 @@
-%%writefile app.py
 import pickle
 import streamlit as slt
 def isfloat(x):
