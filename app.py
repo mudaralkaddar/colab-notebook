@@ -36,11 +36,11 @@ def main():
   Dependents = slt.text_input("Enter the value of Dependents")
   if Dependents.isdigit() == True:
     Dependents = int(Dependents)
-    slt.write('Good you inserted a valid number')  
+    slt.write('Valid Number')  
   #elif len(Dependents) !=0 :
    #   slt.warning('please enter a valid number(enter an postive integer one)' ,icon="⚠️"('.'))
   else:
-      slt.write('please enter a valid number(enter an postive integer one)')
+      slt.write('Please enter a valid number(Number must be postive & integer)')
   Education = slt.radio(
     "Your Academic Status is:",
     ('Graduate', 'not Graduate'))
@@ -73,11 +73,11 @@ def main():
   if  isfloat(CoapplicantIncome):
       if float(CoapplicantIncome)>=0:
         CoapplicantIncome = float(CoapplicantIncome)
-        slt.write('Good you inserted a valid number which is : {}'.format(CoapplicantIncome))
+        slt.write('Number Entered : {}'.format(CoapplicantIncome))
       else:
-        slt.write('please enter a valid number(enter an number equals or bigger than 0$ )')
+      	slt.write('please enter a valid number(number must be equal to or bigger than 0$ )')
   else:
-    slt.write('please enter a valid number(enter an number equals or bigger than 0$ )')
+    slt.write('please enter a valid number(number must be equal to or bigger than 0$ )')
 
   Loan_Amount = slt.slider("What's the Loan-Amount you're applying for?", min_value=10,max_value=500000,step=10)
   slt.write("the loan amount is: ",Loan_Amount, '$')
