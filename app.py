@@ -1,5 +1,6 @@
 import streamlit as slt
 import pickle5 as pickle
+from sklearn.preprocessing import StandardScaler
 def isfloat(x):
   try:
     float(x)
@@ -96,22 +97,26 @@ def main():
   else:
     Credit_History = 0
   result=["can get a loan","can not get a loan"]
+  record=[[Gender,Married,Dependents,Education,Self_Employed,ApplicantIncome,CoapplicantIncome,Loan_Amount,Loan_Amount_Term,Credit_History]]
+  st_x= StandardScaler()  
+  # print(X_train['ApplicantIncome'])
+  record= st_x.fit_transform(record)  
   if slt.button('logistic_regression'):
-    y_pred = logistic_regression.predict([[Gender,Married,Dependents,Education,Self_Employed,ApplicantIncome,CoapplicantIncome,Loan_Amount,Loan_Amount_Term,Credit_History]])
+    y_pred = logistic_regression.predict(record)
     output = y_pred[0]
     if output ==1:
       slt.success("the person with the former data  : {}".format(result[0]))
     else:
       slt.success("the person with the former data  : {}".format(result[1]))
   if slt.button('GNB'):
-    y_pred = logistic_regression.predict([[Gender,Married,Dependents,Education,Self_Employed,ApplicantIncome,CoapplicantIncome,Loan_Amount,Loan_Amount_Term,Credit_History]])
+    y_pred = logistic_regression.predict(record)
     output = y_pred[0]
     if output ==1:
       slt.success("the person with the former data  : {}".format(result[0]))
     else:
       slt.success("the person with the former data  : {}".format(result[1])) 
   if slt.button('tree'):
-    y_pred = logistic_regression.predict([[Gender,Married,Dependents,Education,Self_Employed,ApplicantIncome,CoapplicantIncome,Loan_Amount,Loan_Amount_Term,Credit_History]]) 
+    y_pred = logistic_regression.predict(record) 
     output = y_pred[0]
     if output ==1:
       slt.success("the person with the former data  : {}".format(result[0]))
