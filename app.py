@@ -98,9 +98,8 @@ def main():
     Credit_History = 0
   result=["can get a loan","can not get a loan"]
   record=[[Gender,Married,Dependents,Education,Self_Employed,ApplicantIncome,CoapplicantIncome,Loan_Amount,Loan_Amount_Term,Credit_History]]
-  st_x= StandardScaler()  
-  # print(X_train['ApplicantIncome'])
-  record= st_x.fit_transform(record)  
+ 
+  
   if slt.button('logistic_regression'):
     y_pred = logistic_regression.predict(record)
     output = y_pred[0]
