@@ -24,7 +24,7 @@ def main():
     Gender = -1
 
   Married = slt.radio(
-    "What's your social situation is:",
+    "Your Marital Status is:",
     ('Married', 'not Married'))
   #slt.write('you selected:', Married)
 
@@ -42,7 +42,7 @@ def main():
   else:
       slt.write('please enter a valid number(enter an postive integer one)')
   Education = slt.radio(
-    "What's your social situation is:",
+    "Your Academic Status is:",
     ('Graduate', 'not Graduate'))
   #slt.write('you selected:', Education)
 
@@ -59,7 +59,7 @@ def main():
   else:
     Self_Employed = -1
 
-  ApplicantIncome = slt.text_input("ApplicantIncome")
+  ApplicantIncome = slt.text_input("Applicant Income")
   if  isfloat(ApplicantIncome):
       if float(ApplicantIncome)>=100:
         ApplicantIncome = float(ApplicantIncome)
@@ -69,7 +69,7 @@ def main():
   else:
     slt.write('please enter a valid number(enter an number equals or bigger than 100$)')
     
-  CoapplicantIncome = slt.text_input("CoapplicantIncome")
+  CoapplicantIncome = slt.text_input("Co-applicant Income")
   if  isfloat(CoapplicantIncome):
       if float(CoapplicantIncome)>=0:
         CoapplicantIncome = float(CoapplicantIncome)
@@ -79,19 +79,19 @@ def main():
   else:
     slt.write('please enter a valid number(enter an number equals or bigger than 0$ )')
 
-  Loan_Amount = slt.slider('what is the term of the loan in months?', min_value=10,max_value=500000,step=10)
+  Loan_Amount = slt.slider("What's the Loan-Amount you're applying for?", min_value=10,max_value=500000,step=10)
   slt.write("the loan amount is: ",Loan_Amount, '$')
   
-  Loan_Amount_Term = slt.selectbox('Select your gender',
+  Loan_Amount_Term = slt.selectbox('Loan Term (in Months)',
             (12,24,36,48,60,72,84,96,108,120,132,144,156,168,180,192,204,216,228,240,252,264,276,288,300,312,324,336,348,360))
   slt.write('You selected:', Loan_Amount_Term)
   
   Credit_History = slt.radio(
-    "Did ypu got a loan before?",
-    ('Got a loan before', "Didn't get a loan before"))
+    "Have you Applied for/Received a loan before?",
+    ('YES', "NO"))
   #slt.write('you selected:', Credit_History)
 
-  if Credit_History == 'Got a loan before' :
+  if Credit_History == 'YES' :
     Credit_History = 1
   else:
     Credit_History = 0
